@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>HTML5坦克大战</title>
+ </head>
+ <body>
+  <canvas id='tankMap' width='400px' height='300px' style='background-color:black'>
+  </canvas>
+
+  <script>
+	var canvas1=document.getElementById('tankMap');
+	var cxt=canvas1.getContext('2d');
+
+	var heroX=130;
+	var heroY=230;
+
+	cxt.fillStyle='#DED2B4';
+	cxt.fillRect(heroX,heroY,5,30);
+	cxt.fillRect(heroX+15,heroY,5,30);
+	cxt.fillRect(heroX+5,heroY+5,10,20);
+	cxt.fillStyle='red'
+	cxt.arc(heroX+10,heroY+15,4,0,360,true);
+	cxt.fill();
+
+
+	cxt.strokeStyle='#FFD972';
+	cxt.lineWidth=1.5;
+	cxt.beginPath();
+	cxt.moveTo(heroX+10,heroY+15);
+	cxt.lineTo(heroX+10,heroY);
+	cxt.closePath();
+	cxt.stroke();
+
+
+  </script>
+ </body>
+</html>
